@@ -10,7 +10,7 @@ int* generateRandomArray(int size)
 	}
 
 	//生成随机数种子
-	srand(time(NULL));
+	srand((unsigned int)time(NULL));
 
 	for (int i = 0; i < size; i++)
 	{
