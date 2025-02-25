@@ -77,9 +77,38 @@ void test3(){
 
 	print_list(lt);
 
-	list<int>::iterator pos = find(lt.begin(), lt.end(), 4);
+	list<int>::iterator pos = find(lt.begin(), lt.end(), 3);
 	if (pos != lt.end()) {
-		lt.insert(pos, 100);
+		lt.insert(pos, 10);
+		lt.erase(pos);
+	}
+	print_list(lt);
+
+	lt.sort();
+	print_list(lt);
+	lt.reverse();
+	print_list(lt);
+}
+
+void test4() {
+	list<int> lt;
+	lt.push_back(1);
+	lt.push_back(2);
+	lt.push_back(3);
+	lt.push_back(4);
+	lt.push_back(5);
+	lt.push_back(6);
+	lt.push_back(7);
+	print_list(lt);
+
+	list<int>::iterator it = lt.begin();
+	while (it != lt.end()) {
+		if (*it % 2 == 0) {
+			it = lt.erase(it); // erase()函数执行后，it所指向的节点已被删除，因此it无效，在下一次使用it时，必须先给其赋值
+		}
+		else {
+			it++;
+		}
 	}
 	print_list(lt);
 }
@@ -87,7 +116,7 @@ void test3(){
 
 int main() {
 	
-	test3();
+	test4();
 
 
 
