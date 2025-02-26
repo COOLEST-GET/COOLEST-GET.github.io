@@ -59,7 +59,7 @@ namespace xiong
 			return *this;
 		}
 
-		Self& operator++(int)
+		Self operator++(int)
 		{
 			Self temp(*this);
 			_node = _node->_next;
@@ -72,7 +72,7 @@ namespace xiong
 			return *this;
 		}
 
-		Self& operator--(int)
+		Self operator--(int)
 		{
 			Self temp(*this);
 			_node = _node->_prev;
@@ -114,8 +114,18 @@ namespace xiong
 		// 指针操作
 		Ref operator*()
 		{
-			return 
+			Iterator temp(_it);
+			--temp;
+			return *temp;
 		}
+
+		Ptr operator->()
+		{
+			return &(operator*());
+		}
+
+		//////////////////////////////////////////////
+		// 迭代器移动操作
 
 
 
