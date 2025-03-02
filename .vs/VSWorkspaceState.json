@@ -1,11 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\2024",
-    "\\2025",
-    "\\2025\\2.25",
-    "\\2025\\2.25\\list"
+    "\\1-study",
+    "\\1-study\\list",
+    "\\1-study\\sort"
   ],
-  "SelectedNode": "\\2025\\2.25\\list\\test.cpp",
+  "SelectedNode": "\\1-study\\sort",
   "PreviewInSolutionExplorer": false
 }
